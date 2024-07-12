@@ -1,0 +1,184 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  margin: 0;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 200px;
+  border-bottom: 4px solid #333;
+  overflow: hidden;
+  background-color: transparent; /* Transparent background */
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  background: url('images/running-raven.png') no-repeat center; /* Replace with correct URL */
+  background-size: contain;
+}
+
+.cactus {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 50px;
+  background: url('images/plant.png') no-repeat center; /* Replace with correct URL */
+  background-size: contain;
+  animation: moveCactus 2s linear infinite;
+}
+
+@keyframes moveCactus {
+  from {
+      right: -20px;
+  }
+  to {
+      right: 100%;
+  }
+}
+
+.score, .high-score {
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Ensure text is visible */
+}
+
+.score {
+  left: 10px;
+  top:90%;
+  background-color: #333;
+}
+
+.high-score {
+  left: 10px;
+  top:110%;
+  background-color: #333;
+  color: #4CAF50;
+}
+
+.restart-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 21px;
+  cursor: pointer;
+  background-color: #fff; /* Button background for visibility */
+  border-radius: 50px;
+  background: linear-gradient(270deg, blue, green);
+  color: white;
+  border:none;
+}
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0px;
+  padding: 20px;
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to footer text */
+}
+@media only screen  {
+  .body{
+    width: 100%;
+  }
+  .menu-bar{
+    width: 100%;
+  }
+  .menu-bar a{
+    width: 90%;
+  }
+  .menu-bar img{
+    width: 90%;
+    height: 90%;
+  }
+  footer {
+    width:100%;
+    position:fixed;
+    bottom:0px;
+}
+}
+@media (max-width:796px) {
+  .body{
+    width: 100%;
+  }
+  .menu-bar{
+    width: 130%;
+    left:300px;
+  }
+  .menu-bar a{
+    width: 90%;
+  }
+  .menu-bar img{
+    width: 90%;
+    height: 90%;
+  }
+    footer {
+      width:100%;
+      bottom:0px;
+  }
+  .raven-one {
+    width:50%;
+    height:10%;
+  }
+  .game-data{
+    width:80%;
+    bottom:0px;
+  }
+  .game-container{
+    position: relative;
+    width:100%;
+    top:70px;
+
+  }
+  .main-logo{
+      position: absolute;
+      left: 20%;
+      top: 25px;
+      width:100%;
+  }
+  .score {
+    left: 10px;
+    top:60%;
+    background-color: #333;
+  }
+  
+  .high-score {
+    top:67%;
+
+  }
+}
+@media (max-height:560px) {
+  footer {
+    visibility: collapse;}
+    .game-data {
+      visibility: collapse;
+    }
+
+}

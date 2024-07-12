@@ -1,0 +1,446 @@
+:root{
+  --accent-color: #000000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(raven1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: url(ravencursor.png), auto; /* Custom cursor */
+}
+
+
+.main-logo {
+  position: center;
+  top: 50px;
+  right: 550px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+
+}
+
+.social-icons {
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  z-index: 9999;
+}
+
+/* Rest of your CSS styles */
+
+
+.social-icons img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Menu bar and footer links hover effect */
+a:hover {
+  color: #5c128e; /* Change to the desired hover color */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+#muteButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+#muteButton.active img {
+  /* Add styles for the active state */
+  /* For example, change opacity to indicate muted state */
+  opacity: 0.5;
+}
+
+
+#muteButton img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+#muteButton img:hover {
+  transform: scale(1.1);
+}
+
+#muteButton p {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+}
+
+.menu-bar {
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 580px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for menu bar */
+
+}
+@media only screen  {
+  .body{
+    width: 100%;
+  }
+  .menu-bar{
+    width: 100%;
+  }
+  .menu-bar a{
+    width: 90%;
+  }
+  .menu-bar img{
+    width: 90%;
+    height: 90%;
+  }
+  footer {
+    width:100%;
+    position:fixed;
+    bottom:0px;
+}
+}
+@media (max-width:550px) {
+  .body{
+    width: 100%;
+  }
+  .menu-bar{
+    width: 130%;
+    left:300px;
+  }
+  .menu-bar a{
+    width: 90%;
+  }
+  .menu-bar img{
+    width: 90%;
+    height: 90%;
+  }
+    footer {
+      width:100%;
+      bottom:0px;
+  }
+  .raven-one {
+    width:50%;
+    height:10%;
+  }
+  
+}
+@media (max-height:560px) {
+  footer {
+    visibility: collapse;}
+    .raven-one {
+      visibility: collapse;
+    }
+
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+a:hover {
+  color: #5c128e; /* Change to the desired hover color */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.menu-bar img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.privacy-text {
+  position: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
+}
+
+.terms-text  {
+  position: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the privacy policy text */
+}
+.terms-text h2{
+  margin-bottom: 20px;
+
+}
+.privacy-text p {
+  position: center;
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+.raven-one {
+  position: fixed;
+  bottom: 0px; /* Adjust position as needed */
+  left: 13px; /* Adjust position as needed */
+  z-index: 999; /* Ensure it is above the phone screen */
+}
+
+.raven-two {
+  position: fixed;
+  bottom: 0px; /* Adjust position as needed */
+  left: 50px; /* Slightly to the left of the first one */
+  z-index: 999; /* Ensure it is above the phone screen */
+}
+
+ul li a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for "Our Story", "Contact Us", "Careers" */
+}
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0px;
+  padding: 20px;
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect to footer text */
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #5c128e; /* Purple border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Box shadow */
+  max-width: 90%;
+  width:800px;
+}
+.aboutus-picture{
+  border-radius: 10px;
+  height: 450px;
+  width: 750px;
+  display:flex;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  margin-top: 5%;
+
+}
+.careers-picture {
+  height: 500px;
+  width: 350px;
+}
+.linkedin-logo-png-transparent{
+position: center;
+width:  250px;
+height : 50px;
+margin-bottom: 20px;
+}
+.handshake-logo{
+  position:center;
+  width: 250px;
+  height : 50px;
+
+  }
+.contact-container{
+
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  }
+.contact-left{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+}
+.contact-left-tittle h2{
+  font-weight:600;
+  margin-bottom: 5px;
+  margin-top: 70px;
+  color: #fff;
+
+}
+.contact-left-tittle hr{
+  border:none;
+  width: 200px;
+  height: 5px;
+  background-color: #5c128e;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-inputs{
+  border:none;
+  width: 400px;
+  height: 50px;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  border-radius: 50px;
+
+}
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus{
+border: 2px solid black;
+}
+.contact-inputs::placeholder{
+  color: #a9a9a9
+
+}
+.contact-left button{
+  display:flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  gap: 10px;
+  border:none;
+  border-radius: 50px;
+  background: linear-gradient(270deg,black, #5c128e);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.contact-left button img{
+  height: 25px;
+  width: 20px;
+}
+
+.mute-btn a{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.image-video video{
+  width:200px;
+  position:absolute;
+  bottom: 115px; 
+  right: 38px;
+  border-radius: 5px;
+}
+.phone-sreen{
+  position:absolute;
+  bottom: -40px; 
+  right: -70px;
+}
+
+@media only screen and (max-width:1100px){
+  .phone-sreen{
+    visibility: collapse;
+  }
+  .image-video video{
+visibility: collapse;
+  }
+}
+.slider-wrapper{
+  position: relative;
+  max-width: 48rem;
+  
+}
+.slider{
+  border-radius: 10px;
+  height: 600px;
+  width: 750px;
+  display:flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  margin-top: 5%;
+
+}
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-nav{
+  display:flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom:1.25rem;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-nav a{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  transition: all ease 250ms ;
+}
+.slider-nav a:hover{
+  opacity: 1;
+}
